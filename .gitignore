@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Buildozer
+bin/
+.buildozer/
+
+# Local database & prefs
+*.db
+*.sqlite3
+aasaa_prefs.json
+
+# IDE / macOS
+.idea/
+.vscode/
+.DS_Store
