@@ -26,7 +26,7 @@ orientation = portrait
 fullscreen = 0
 
 # Android
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a
 
 android.permissions = INTERNET,ACCESS_FINE_LOCATION,ACCESS_COARSE_LOCATION,READ_PHONE_STATE,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,ACCESS_NETWORK_STATE,RECEIVE_BOOT_COMPLETED,FOREGROUND_SERVICE
 
