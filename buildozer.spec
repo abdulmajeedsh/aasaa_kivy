@@ -51,7 +51,7 @@ android.logcat_filters = *:S python:D
 android.allow_backup = True
 
 # P4A
-p4a.branch = master
+# p4a.branch = master
 
 # Whitelist
 android.whitelist =
