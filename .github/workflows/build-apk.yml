@@ -69,9 +69,16 @@ jobs:
 
           mkdir -p $BSDK
 
-          for dir in build-tools platforms platform-tools licenses cmdline-tools; do
+          for dir in platforms platform-tools licenses cmdline-tools; do
             [ -d "$ANDROID_HOME/$dir" ] && ln -sfn $ANDROID_HOME/$dir $BSDK/$dir
           done
+
+          # Only expose the specific build-tools version we need.
+          # Symlinking the whole build-tools dir would expose 37.0.0-rc2 (pre-installed
+          # on the runner), which p4a picks as the max version. AGP 8.x can't parse
+          # the RC suffix and throws "Value is null" in the generated build.gradle.
+          mkdir -p $BSDK/build-tools
+          ln -sfn $ANDROID_HOME/build-tools/33.0.2 $BSDK/build-tools/33.0.2
 
           # Buildozer looks for sdkmanager at the old tools/bin/ path
           mkdir -p $BSDK/tools/bin
